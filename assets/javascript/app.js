@@ -7,19 +7,46 @@ var unansweredTally = 0;
 
 
 $(document).ready(function() {
-    $('#questionOne').hide();
-	$('#questionTwo').hide();
-	$('#questionThree').hide();
-	$('#questionFour').hide();
-	console.log('working');
+    $('#questions').hide();
+	
 });
 
 
 
 $("#startBtn").click(function(){
+		
         $("#currentQuestion").append($("#questionOne").html());
         $('#startBtn').hide();
+
+
+        var timeLeft = 3;
+		var elem = document.getElementById('some_div');
+		var timerId = setInterval(countdown, 1000);
+
+		function countdown() {
+		    if (timeLeft == -1) {
+		        clearTimeout(timerId);
+		        doSomething();
+
+		    
+		      
+		    } else {
+		        elem.innerHTML = timeLeft + ' seconds remaining';
+		        timeLeft--;
+		    }
+		}
+
+		function doSomething() {
+			$("#currentQuestion").empty();		    	
+		    $("#currentQuestion").append($("#answerOne").html());		    		   
+		}
+
+
+
     });
+
+
+
 
 
 

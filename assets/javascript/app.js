@@ -55,7 +55,7 @@ $("#startBtn").click(function(){
 
 		function noAnswer() {
 			$("#currentQuestion").empty();		    	
-		    $("#currentQuestion").append($("#answerOne").html());
+		    $("#currentQuestion").append($(" ").html());
 		    clearTimeout(timerId);		    		   
 		}
 
@@ -88,6 +88,7 @@ $("#startBtn").click(function(){
 			        ele.innerHTML = timeLef + ' seconds remaining';
 			        timeLef--;
 			    }
+
 			}
 
 			function doSomething2() {
@@ -98,87 +99,143 @@ $("#startBtn").click(function(){
 
 
 		function nextQuestion(){
-			$("#currentQuestion").empty();		    	
-			 	$("#currentQuestion").append($("#questionTwo").html());
+			 $("#currentQuestion").empty();
+			 $("#currentQuestion").append($("#questionTwo").html());
 
 
-			 // 	var timeLeft = 3;
-  
-				// var elem = document.getElementById('counter');
-				// var timerId = setInterval(countdown, 1000);
+			var timeLeft = 3;
+	  
+			var elem = document.getElementById('counter');
+			var timerId = setInterval(countdown, 1000);
 
-				
-				// function countdown() {
-				// 	if($("input:radio[id='questionTwoRadio1']").is(":checked")){
-				// 		rightAnswer();
-				// 		resultTimer2();
-				// 	}
-				// 	else if($("input:radio[id='questionTwoRadio2']").is(":checked")){
-				// 		wrongAnswer();
-				// 		resultTimer2();
-				// 	}
-				// 	else if($("input:radio[id='questionTwoRadio3']").is(":checked")){
-				// 		wrongAnswer();
-				// 		resultTimer2();
-				// 	}
-				// 	else if($("input:radio[id='questionTwoRadio4']").is(":checked")){
-				// 		wrongAnswer();
-				// 		resultTimer2();
-				// 	}
-				// 	else if (timeLeft == -1) {
-				        
-				//        noAnswer();
-				//        resultTimer2();
-				//     } 
-				//     else {
-				//         elem.innerHTML = timeLeft + ' seconds remaining';
-				//         timeLeft--;
-				//     }
-				// }
+			
+			function countdown() {
+				if($("input:radio[id='questionTwoRadio1']").is(":checked")){
+					rightAnswer();
+					resultTimer2()
+				}
+				else if($("input:radio[id='questionTwoRadio2']").is(":checked")){
+					wrongAnswer();
+					resultTimer2()
+				}
+				else if($("input:radio[id='questionTwoRadio3']").is(":checked")){
+					wrongAnswer();
+					resultTimer2()
+				}
+				else if($("input:radio[id='questionTwoRadio4']").is(":checked")){
+					wrongAnswer();
+					resultTimer2()
+				}
+				else if (timeLeft == -1) {
+			        
+			       noAnswer();
+			       resultTimer();
+			    } 
+			    else {
+			        elem.innerHTML = timeLeft + ' seconds remaining';
+			        timeLeft--;
+			    }
+			}
 
-				// function noAnswer() {
-				// 	$("#currentQuestion").empty();		    	
-				//     $("#currentQuestion").append($("#answerTwoOne").html());
-				//     clearTimeout(timerId);		    		   
-				// }
+			function noAnswer() {
+				$("#currentQuestion").empty();		    	
+			    $("#currentQuestion").append($("#answerTwoOne").html());
+			    clearTimeout(timerId);		    		   
+			}
 
-				// function rightAnswer(){
-				// 	$("#currentQuestion").empty();		    	
-				// 	 	$("#currentQuestion").append($("#answerTwoTwo").html());
-				// 	 	clearTimeout(timerId);	
-				// }
+			function rightAnswer(){
+				$("#currentQuestion").empty();		    	
+				 	$("#currentQuestion").append($("#answerTwoTwo").html());
+				 	clearTimeout(timerId);	
+			}
 
-				// function wrongAnswer(){
-				// 	$("#currentQuestion").empty();		    	
-				// 	 	$("#currentQuestion").append($("#answerTwoOne").html());
-				// 	 	clearTimeout(timerId);	
-				// }
-
+			function wrongAnswer(){
+				$("#currentQuestion").empty();		    	
+				 	$("#currentQuestion").append($("#answerTwoThree").html());
+				 	clearTimeout(timerId);	
+			}
 		}
 
 
-		// function resultTimer2(){
-		// 	var timeLef = 3;
-		// 	var ele = document.getElementById('some_div2');
-		// 	var timerI = setInterval(countdown2, 1000);
+		function resultTimer2(){
+			var timeLef = 3;
+			var ele = document.getElementById('some_div2');
+			var timerI = setInterval(countdown2, 1000);
 
-		// 	function countdown2() {
-		// 	    if (timeLef == -1) {
-		// 	        clearTimeout(timerI);
-		// 	        doSomething2();
-		// 	    } else {
-		// 	        ele.innerHTML = timeLef + ' seconds remaining';
-		// 	        timeLef--;
-		// 	    }
-		// 	}
+			function countdown2() {
+			    if (timeLef == -1) {
+			        clearTimeout(timerI);
+			        doSomething2();
+			    } else {
+			        ele.innerHTML = timeLef + ' seconds remaining';
+			        timeLef--;
+			    }
 
-		// 	function doSomething2() {
-		// 	    nextQuestion();
-		// 	}
-		// }
+			}
 
-		
+			function doSomething2() {
+			    nextQuestion2();
+			}
+		}
 
+
+		function nextQuestion2(){
+			 $("#currentQuestion").empty();
+			 $("#currentQuestion").append($("#questionThree").html());
+
+
+			var timeLeft = 3;
+	  
+			var elem = document.getElementById('counter');
+			var timerId = setInterval(countdown, 1000);
+
+			
+			function countdown() {
+				if($("input:radio[id='questionThreeRadio1']").is(":checked")){
+					rightAnswer();
+					resultTimer2()
+				}
+				else if($("input:radio[id='questionThreeRadio2']").is(":checked")){
+					wrongAnswer();
+					resultTimer2()
+				}
+				else if($("input:radio[id='questionThreeRadio3']").is(":checked")){
+					wrongAnswer();
+					resultTimer2()
+				}
+				else if($("input:radio[id='questionThreeRadio4']").is(":checked")){
+					wrongAnswer();
+					resultTimer2()
+				}
+				else if (timeLeft == -1) {
+			        
+			       noAnswer();
+			       resultTimer();
+			    } 
+			    else {
+			        elem.innerHTML = timeLeft + ' seconds remaining';
+			        timeLeft--;
+			    }
+			}
+
+			function noAnswer() {
+				$("#currentQuestion").empty();		    	
+			    $("#currentQuestion").append($("#answerThreeOne").html());
+			    clearTimeout(timerId);		    		   
+			}
+
+			function rightAnswer(){
+				$("#currentQuestion").empty();		    	
+				 	$("#currentQuestion").append($("#answerThreeTwo").html());
+				 	clearTimeout(timerId);	
+			}
+
+			function wrongAnswer(){
+				$("#currentQuestion").empty();		    	
+				 	$("#currentQuestion").append($("#answerThreeThree").html());
+				 	clearTimeout(timerId);	
+			}
+		}
 
 
 

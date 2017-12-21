@@ -20,26 +20,32 @@ $("#startBtn").click(function(){
 
 
         var timeLeft = 3;
+  
 		var elem = document.getElementById('counter');
 		var timerId = setInterval(countdown, 1000);
 
-  
+		
 		function countdown() {
 			if($("input:radio[id='questionOneRadio1']").is(":checked")){
 				rightAnswer();
+				resultTimer();
 			}
 			else if($("input:radio[id='questionOneRadio2']").is(":checked")){
 				wrongAnswer();
+				resultTimer();
 			}
 			else if($("input:radio[id='questionOneRadio3']").is(":checked")){
 				wrongAnswer();
+				resultTimer();
 			}
 			else if($("input:radio[id='questionOneRadio4']").is(":checked")){
 				wrongAnswer();
+				resultTimer();
 			}
 			else if (timeLeft == -1) {
 		        
 		       noAnswer();
+		       resultTimer();
 		    } 
 		    else {
 		        elem.innerHTML = timeLeft + ' seconds remaining';
@@ -66,13 +72,112 @@ $("#startBtn").click(function(){
 		}
 
 
-
     });
 
 
+		function resultTimer(){
+			var timeLef = 3;
+			var ele = document.getElementById('some_div2');
+			var timerI = setInterval(countdown2, 1000);
+
+			function countdown2() {
+			    if (timeLef == -1) {
+			        clearTimeout(timerI);
+			        doSomething2();
+			    } else {
+			        ele.innerHTML = timeLef + ' seconds remaining';
+			        timeLef--;
+			    }
+			}
+
+			function doSomething2() {
+			    nextQuestion();
+			}
+		}
 
 
 
+		function nextQuestion(){
+			$("#currentQuestion").empty();		    	
+			 	$("#currentQuestion").append($("#questionTwo").html());
+
+
+			 // 	var timeLeft = 3;
+  
+				// var elem = document.getElementById('counter');
+				// var timerId = setInterval(countdown, 1000);
+
+				
+				// function countdown() {
+				// 	if($("input:radio[id='questionTwoRadio1']").is(":checked")){
+				// 		rightAnswer();
+				// 		resultTimer2();
+				// 	}
+				// 	else if($("input:radio[id='questionTwoRadio2']").is(":checked")){
+				// 		wrongAnswer();
+				// 		resultTimer2();
+				// 	}
+				// 	else if($("input:radio[id='questionTwoRadio3']").is(":checked")){
+				// 		wrongAnswer();
+				// 		resultTimer2();
+				// 	}
+				// 	else if($("input:radio[id='questionTwoRadio4']").is(":checked")){
+				// 		wrongAnswer();
+				// 		resultTimer2();
+				// 	}
+				// 	else if (timeLeft == -1) {
+				        
+				//        noAnswer();
+				//        resultTimer2();
+				//     } 
+				//     else {
+				//         elem.innerHTML = timeLeft + ' seconds remaining';
+				//         timeLeft--;
+				//     }
+				// }
+
+				// function noAnswer() {
+				// 	$("#currentQuestion").empty();		    	
+				//     $("#currentQuestion").append($("#answerTwoOne").html());
+				//     clearTimeout(timerId);		    		   
+				// }
+
+				// function rightAnswer(){
+				// 	$("#currentQuestion").empty();		    	
+				// 	 	$("#currentQuestion").append($("#answerTwoTwo").html());
+				// 	 	clearTimeout(timerId);	
+				// }
+
+				// function wrongAnswer(){
+				// 	$("#currentQuestion").empty();		    	
+				// 	 	$("#currentQuestion").append($("#answerTwoOne").html());
+				// 	 	clearTimeout(timerId);	
+				// }
+
+		}
+
+
+		// function resultTimer2(){
+		// 	var timeLef = 3;
+		// 	var ele = document.getElementById('some_div2');
+		// 	var timerI = setInterval(countdown2, 1000);
+
+		// 	function countdown2() {
+		// 	    if (timeLef == -1) {
+		// 	        clearTimeout(timerI);
+		// 	        doSomething2();
+		// 	    } else {
+		// 	        ele.innerHTML = timeLef + ' seconds remaining';
+		// 	        timeLef--;
+		// 	    }
+		// 	}
+
+		// 	function doSomething2() {
+		// 	    nextQuestion();
+		// 	}
+		// }
+
+		
 
 
 

@@ -1,234 +1,238 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <title>Hello, world!</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-
     <link rel="stylesheet" href="assets/css/style.css">
-  </head>
-  <body>
+</head>
 
+<body>
+    <!-- start button -->
     <div class="container text-center">
-       <div class="row">
-        <div class="col-md-12">
-          <button type="button" class="btn btn-success" id="startBtn">Start</button>
+        <div class="row p-t-20" >
+            <div class="col-md-12 p-t-20">
+                <h1 class="p-b-20">Christmas Trivia</h1>
+                <button type="button" class="btn-style" id="startBtn" >Start</button>
+            </div>
         </div>
-      </div>
+        <!-- start button -->
 
-       <div class="row">
-        <div class="col-md-12">
-          <div id="currentQuestion">
-          </div>
+        <!-- ************************************************************************ -->
+
+        <!-- Current question place holder -->
+        <div class="row p-t-20">
+            <div class="col-md-12">
+                <div id="currentQuestion" style="background-color:#e4e4e4;">
+                </div>
+            </div>
         </div>
-      </div>
     </div>
+    <!-- Current question place holder -->
+
+    <!-- ************************************************************************ -->
 
     <div class="container text-center" id="questions">
-      
-      
-
-      <div class="row" id="questionOne">
-        <div class="col-md-12"> 
-           <div id="counter"></div> 
-          <h1 class="question">Question One</h1>
-          <div class="answers">
-            <div class="form-check">
-              <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="exampleRadios1" id="questionOneRadio1" value="option1" >
-                answer
-              </label>
+        <!-- question 1 with radio button options -->
+        <div class="row p-t-20 p-b-20" id="questionOne">
+            <div class="col-md-12">
+                <div id="counter"></div>
+                <h1 class="question p-b-40 p-t-20">How many reindeer does Santa have?</h1>
+                <div class="answers">
+                    <div class="form-check">
+                        <label class="form-check-label btn-style">
+                            <input class="form-check-input" type="radio" name="exampleRadios1" id="questionOneRadio1" value="option1"> 8
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label btn-style">
+                            <input class="form-check-input" type="radio" name="exampleRadios1" id="questionOneRadio2" value="option1"> 6
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label btn-style">
+                            <input class="form-check-input" type="radio" name="exampleRadios1" id="questionOneRadio3" value="option1"> 12
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label btn-style">
+                            <input class="form-check-input" type="radio" name="exampleRadios1" id="questionOneRadio4" value="option1"> 11
+                        </label>
+                    </div>
+                </div>
             </div>
-            <div class="form-check">
-              <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="exampleRadios1" id="questionOneRadio2" value="option1">
-                wrong
-              </label>
+        </div>
+        <!-- question 1 with radio button options -->
+
+        <!-- ************************************************************************ -->
+
+        <!-- Answers boxes to question 1 -->
+        <div class="row p-t-20 p-b-20" id="answerOne">
+            <div id="some_div2"></div>
+            <div class="col-md-12">
+                <h1 class="question p-b-40 p-t-20">Correct!</h1>
+                <img class="img-fluid" src="https://images.unsplash.com/photo-1479740030693-66ad10f3a7b0?auto=format&fit=crop&w=1950&q=80">
             </div>
-            <div class="form-check">
-              <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="exampleRadios1" id="questionOneRadio3" value="option1" >
-                wrong
-              </label>
+        </div>
+        <div class="row p-t-20 p-b-20" id="answerTwo">
+            <div id="some_div2"></div>
+            <div class="col-md-12">
+                <h1 class="question p-t-20">Times Up!</h1>
+                <p class="question p-b-40 p-t-20">Correct Answer: Santa has 8 reindeer</p>
+                <img class="img-fluid" src="https://images.unsplash.com/photo-1480384731139-f99d420d8970?auto=format&fit=crop&w=1950&q=80">
             </div>
-            <div class="form-check">
-              <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="exampleRadios1" id="questionOneRadio4" value="option1" >
-                wrong
-              </label>
+        </div>
+        <div class="row p-t-20 p-b-20" id="answerThree">
+            <div id="some_div2"></div>
+            <div class="col-md-12">
+                <h1 class="question p-t-20">Wrong!</h1>
+                <p class="question p-b-40 p-t-20">Correct Answer: Santa has 8 reindeer</p>
+                <img class="img-fluid" src="https://images.unsplash.com/photo-1480384731139-f99d420d8970?auto=format&fit=crop&w=1950&q=80">
             </div>
-          </div>
         </div>
-        
-      </div>
-    
-      <div class="row" id="questionTwo">
-        <div class="col-md-12">
-        <div id="counter"></div>  
-          <h1 class="question">Question Two</h1>
-          <div class="answers">
-            <div class="form-check">
-              <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="exampleRadios2" id="questionTwoRadio1" value="option1">
-                answer
-              </label>
+        <!-- Answers boxes to question 1 -->
+
+        <!-- ************************************************************************ -->
+
+        <!-- question 2 with radio button options -->
+        <div class="row p-t-20 p-b-20" id="questionTwo">
+            <div class="col-md-12">
+                <div id="counter"></div>
+                <h1 class="question p-b-40 p-t-20">What do you under the mistletoe?</h1>
+                <div class="answers">
+                    <div class="form-check">
+                        <label class="form-check-label btn-style">
+                            <input class="form-check-input" type="radio" name="exampleRadios2" id="questionTwoRadio1" value="option1">Kiss
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label btn-style">
+                            <input class="form-check-input" type="radio" name="exampleRadios2" id="questionTwoRadio2" value="option1">Hug
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label btn-style">
+                            <input class="form-check-input" type="radio" name="exampleRadios2" id="questionTwoRadio3" value="option1">Exchange Gifts
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label btn-style">
+                            <input class="form-check-input" type="radio" name="exampleRadios2" id="questionTwoRadio4" value="option1">Make a wish
+                        </label>
+                    </div>
+                </div>
             </div>
-            <div class="form-check">
-              <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="exampleRadios2" id="questionTwoRadio2" value="option1">
-                wrong
-              </label>
+        </div>
+        <!-- question 2 with radio button options -->
+
+        <!-- ************************************************************************ -->
+
+        <!-- Answers boxes to question 2 -->
+        <div class="row p-t-20 p-b-20" id="answerTwoOne">
+            <div id="some_div2"></div>
+            <div class="col-md-12">
+                <h1 class="question p-b-40 p-t-20">Correct!</h1>
+                <img class="img-fluid" src="https://images.unsplash.com/photo-1481936774416-8756052f088b?auto=format&fit=crop&w=934&q=80">
             </div>
-            <div class="form-check">
-              <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="exampleRadios2" id="questionTwoRadio3" value="option1">
-                wrong
-              </label>
+        </div>
+        <div class="row p-t-20 p-b-20" id="answerTwoTwo">
+            <div id="some_div2"></div>
+            <div class="col-md-12">
+                <h1 class="question p-t-20">Times Up!</h1>
+                <p class="question p-b-40 p-t-20">Correct Answer: Kiss</p>
+                <img class="img-fluid" src="https://images.unsplash.com/photo-1461092678334-1aa3ab3543ce?auto=format&fit=crop&w=934&q=80">
             </div>
-            <div class="form-check">
-              <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="exampleRadios2" id="questionTwoRadio4" value="option1">
-                wrong
-              </label>
+        </div>
+        <div class="row p-t-20 p-b-20" id="answerTwoThree">
+            <div id="some_div2"></div>
+            <div class="col-md-12">
+                <h1 class="question p-t-20">Wrong!</h1>
+                <p class="question p-b-40 p-t-20">Correct Answer: Kiss</p>
+                <img class="img-fluid" src="https://images.unsplash.com/photo-1461092678334-1aa3ab3543ce?auto=format&fit=crop&w=934&q=80">
             </div>
-          </div>
         </div>
-        
-      </div>
+        <!-- Answers boxes to question 2 -->
 
-      <div class="row" id="questionThree">
-        <div class="col-md-12">
-        <div id="counter"></div>  
-          <h1 class="question">Question Three</h1>
-          <div class="answers">
-            <div class="form-check">
-              <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="exampleRadios3" id="questionThreeRadio1" value="option1">
-                answer
-              </label>
+        <!-- ************************************************************************ -->
+
+        <!-- question 3 with radio button options -->
+        <div class="row p-t-20 p-b-20" id="questionThree">
+            <div class="col-md-12">
+                <div id="counter"></div>
+                <h1 class="question p-b-40 p-t-20">What is the signature color of the Christmas season?</h1>
+                <div class="answers">
+                    <div class="form-check">
+                        <label class="form-check-label btn-style">
+                            <input class="form-check-input" type="radio" name="exampleRadios3" id="questionThreeRadio1" value="option1"> Red
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label btn-style">
+                            <input class="form-check-input" type="radio" name="exampleRadios3" id="questionThreeRadio2" value="option1"> Green
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label btn-style">
+                            <input class="form-check-input" type="radio" name="exampleRadios3" id="questionThreeRadio3" value="option1"> Gold
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label btn-style">
+                            <input class="form-check-input" type="radio" name="exampleRadios3" id="questionThreeRadio4" value="option1"> White
+                        </label>
+                    </div>
+                </div>
             </div>
-            <div class="form-check">
-              <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="exampleRadios3" id="questionThreeRadio2" value="option1">
-                wrong
-              </label>
+        </div>
+        <!-- question 3 with radio button options -->
+
+        <!-- ************************************************************************ -->
+
+        <!-- Answers boxes to question 3 -->
+        <div class="row p-t-20 p-b-20" id="answerThreeOne">
+            <div id="some_div2"></div>
+            <div class="col-md-12">
+                <h1 class="question p-b-40 p-t-20">Correct!</h1>
+                <img class="img-fluid" src="https://images.unsplash.com/photo-1482517716521-3120e5340ed3?auto=format&fit=crop&w=934&q=80">
             </div>
-            <div class="form-check">
-              <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="exampleRadios3" id="questionThreeRadio3" value="option1">
-                wrong
-              </label>
+        </div>
+        <div class="row p-t-20 p-b-20" id="answerThreeTwo">
+            <div id="some_div2"></div>
+            <div class="col-md-12">
+                <h1 class="question p-t-20">Times Up!</h1>
+                <p class="question p-b-40 p-t-20">Correct Answer: Red</p>
+                <img class="img-fluid" src="https://images.unsplash.com/photo-1450198342040-c32e6d1ef2e4?auto=format&fit=crop&w=1778&q=80">
             </div>
-            <div class="form-check">
-              <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="exampleRadios3" id="questionThreeRadio4" value="option1">
-                wrong
-              </label>
+        </div>
+        <div class="row p-t-20 p-b-20" id="answerThreeThree">
+            <div id="some_div2"></div>
+            <div class="col-md-12">
+                <h1 class="question p-t-20">Wrong!</h1>
+                <p class="question p-b-40 p-t-20">Correct Answer: Red</p>
+                <img class="img-fluid" src="https://images.unsplash.com/photo-1450198342040-c32e6d1ef2e4?auto=format&fit=crop&w=1778&q=80">
             </div>
-          </div>
         </div>
-        
-      </div>
+        <!-- Answers boxes to question 3 -->
 
-         <div class="row" id="gameResults">
-         <div id="some_div2"></div>
-        <div class="col-md-12">  
-          <h1 class="total-right">C</h1>
-          <h1 class="total-wrong">C</h1>
-          <h1 class="total-unaswered">C</h1>
-          <button></button>
+        <!-- ************************************************************************ -->
+
+        <!-- End of the game results -->
+        <div class="row p-t-20 p-b-20" id="gameResults">
+            <div id="some_div2" class="p-t-20"></div>
+            <div class="col-md-12">
+                <h1 class="p-t-20 p-b-20">All done, here's how you did!</h1>
+                <p>Correct Answers: <span class="total-right"></span></p>
+                <p>Wrong Answers: <span class="total-wrong"></span></p>
+                <p>Unanswered: <span class="total-unanswered"></span></p>
+               
+            </div>
         </div>
-        
-      </div>
+        <!-- End of the game results -->
 
-      <div class="row" id="answerOne">
-        <div id="some_div2"></div>
-        <div class="col-md-12">  
-          <h1 class="question">Correct Answer: Shoes</h1>
-
-        </div>
-        
-      </div>
-
-       <div class="row" id="answerTwo">
-        <div id="some_div2"></div>
-        <div class="col-md-12">  
-          <h1 class="question">Correct Answer: dfsfsdfsd</h1>
-
-        </div>
-        
-      </div>
-
-      <div class="row" id="answerThree">
-         <div id="some_div2"></div>
-        <div class="col-md-12">  
-          <h1 class="question">Wrong Answer:nope</h1>
-
-        </div>
-        
-      </div>
-
-      <div class="row" id="answerTwoOne">
-        <div id="some_div2"></div>
-        <div class="col-md-12">  
-          <h1 class="question">Cdssdfsf</h1>
-
-        </div>
-        
-      </div>
-
-       <div class="row" id="answerTwoTwo">
-        <div id="some_div2"></div>
-        <div class="col-md-12">  
-          <h1 class="question">ttttttt</h1>
-
-        </div>
-        
-      </div>
-
-      <div class="row" id="answerTwoThree">
-         <div id="some_div2"></div>
-        <div class="col-md-12">  
-          <h1 class="question">hhhhh</h1>
-
-        </div>
-        
-      </div>
-
-      <div class="row" id="answerThreeOne">
-        <div id="some_div2"></div>
-        <div class="col-md-12">  
-          <h1 class="question">A</h1>
-
-        </div>
-        
-      </div>
-
-       <div class="row" id="answerThreeTwo">
-        <div id="some_div2"></div>
-        <div class="col-md-12">  
-          <h1 class="question">B</h1>
-
-        </div>
-        
-      </div>
-
-      <div class="row" id="answerThreeThree">
-         <div id="some_div2"></div>
-        <div class="col-md-12">  
-          <h1 class="question">C</h1>
-
-        </div>
-        
-      </div>
-
-
-   
-    
     </div>
 
     <!-- Optional JavaScript -->
@@ -236,7 +240,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-
     <script src="assets/javascript/app.js"></script>
-  </body>
+</body>
+
 </html>

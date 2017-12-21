@@ -1,3 +1,46 @@
 ul {
   list-style-type: none;
 }
+
+.btn-style{
+	
+	padding: 20px 40px;
+	border-radius: 4px;
+	min-width:300px;
+	border: 1px solid grey;
+}
+
+
+.btn-style:hover{
+	
+	border: 1px solid red;
+}
+
+
+
+input[type="radio"] {
+    display:none;
+}
+
+.p-t-20{
+	padding-top:20px;
+}
+
+
+.p-b-20{
+	padding-bottom:20px;
+}
+
+.p-t-40{
+	padding-top:40px;
+}
+
+.p-b-40{
+	padding-bottom:40px;
+}
+
+body{
+	background: url('https://images.unsplash.com/photo-1508172819040-536e3f54970f?auto=format&fit=crop&w=1950&q=80');
+	background: repeat-x cover;
+
+}

@@ -1,9 +1,7 @@
 var right = 0;
 var wrong = 0;
 var unanswered = 0;
-var wrongTally = 0;
-var rightTally = 0;
-var unansweredTally = 0;
+
 
 
 $(document).ready(function() {
@@ -13,13 +11,13 @@ $(document).ready(function() {
 
 
 
-$("#startBtn").click(function(){
+ $("#startBtn").click(function(){
 		
         $("#currentQuestion").append($("#questionOne").html());
         $('#startBtn').hide();
 
 
-        var timeLeft = 3;
+        var timeLeft = 10;
   
 		var elem = document.getElementById('counter');
 		var timerId = setInterval(countdown, 1000);
@@ -65,13 +63,13 @@ $("#startBtn").click(function(){
 
 		function noAnswer() {
 			$("#currentQuestion").empty();		    	
-		    $("#currentQuestion").append($(" ").html());
+		    $("#currentQuestion").append($("#answerTwo").html());
 		    clearTimeout(timerId);		    		   
 		}
 
 		function rightAnswer(){
 			$("#currentQuestion").empty();		    	
-			 	$("#currentQuestion").append($("#answerTwo").html());
+			 	$("#currentQuestion").append($("#answerOne").html());
 			 	clearTimeout(timerId);	
 		}
 
@@ -95,7 +93,7 @@ $("#startBtn").click(function(){
 			        clearTimeout(timerI);
 			        doSomething2();
 			    } else {
-			        ele.innerHTML = timeLef + ' seconds remaining';
+			        ele.innerHTML = 'Next question in ' + timeLef + ' seconds';
 			        timeLef--;
 			    }
 
@@ -113,7 +111,7 @@ $("#startBtn").click(function(){
 			 $("#currentQuestion").append($("#questionTwo").html());
 
 
-			var timeLeft = 3;
+			var timeLeft = 10;
 	  
 			var elem = document.getElementById('counter');
 			var timerId = setInterval(countdown, 1000);
@@ -159,13 +157,13 @@ $("#startBtn").click(function(){
 
 			function noAnswer() {
 				$("#currentQuestion").empty();		    	
-			    $("#currentQuestion").append($("#answerTwoOne").html());
+			    $("#currentQuestion").append($("#answerTwoTwo").html());
 			    clearTimeout(timerId);		    		   
 			}
 
 			function rightAnswer(){
 				$("#currentQuestion").empty();		    	
-				 	$("#currentQuestion").append($("#answerTwoTwo").html());
+				 	$("#currentQuestion").append($("#answerTwoOne").html());
 				 	clearTimeout(timerId);	
 			}
 
@@ -187,7 +185,7 @@ $("#startBtn").click(function(){
 			        clearTimeout(timerI);
 			        doSomething2();
 			    } else {
-			        ele.innerHTML = timeLef + ' seconds remaining';
+			        ele.innerHTML = 'Next question in ' + timeLef + ' seconds';
 			        timeLef--;
 			    }
 
@@ -204,7 +202,7 @@ $("#startBtn").click(function(){
 			 $("#currentQuestion").append($("#questionThree").html());
 
 
-			var timeLeft = 3;
+			var timeLeft = 10;
 	  
 			var elem = document.getElementById('counter');
 			var timerId = setInterval(countdown, 1000);
@@ -250,13 +248,13 @@ $("#startBtn").click(function(){
 
 			function noAnswer() {
 				$("#currentQuestion").empty();		    	
-			    $("#currentQuestion").append($("#answerThreeOne").html());
+			    $("#currentQuestion").append($("#answerThreeTwo").html());
 			    clearTimeout(timerId);		    		   
 			}
 
 			function rightAnswer(){
 				$("#currentQuestion").empty();		    	
-				 	$("#currentQuestion").append($("#answerThreeTwo").html());
+				 	$("#currentQuestion").append($("#answerThreeOne").html());
 				 	clearTimeout(timerId);	
 			}
 
@@ -278,7 +276,7 @@ $("#startBtn").click(function(){
 			        clearTimeout(timerI);
 			        doSomething2();
 			    } else {
-			        ele.innerHTML = timeLef + ' seconds remaining';
+			        ele.innerHTML = 'Next question in ' + timeLef + ' seconds';
 			        timeLef--;
 			    }
 
@@ -292,10 +290,7 @@ $("#startBtn").click(function(){
 
 		function nextQuestion3(){
 			 $("#currentQuestion").empty();
-			 $("#currentQuestion").append($("#gameResults").html());
-
-
-
+			  $("#currentQuestion").append($("#gameResults").html());
 
 
 		}

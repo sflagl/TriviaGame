@@ -6,10 +6,16 @@ var unanswered = 0;
 
 $(document).ready(function() {
     $('#questions').hide();
+
+
 	
-});
 
 
+
+ $("#restart").click(function(){
+		 	
+
+		 });
 
  $("#startBtn").click(function(){
 		
@@ -82,6 +88,11 @@ $(document).ready(function() {
 
     });
 
+ });
+function OnRestart(){
+	alert('he');
+		 	$('#gameResults').hide();
+}
 
 		function resultTimer(){
 			var timeLef = 3;
@@ -291,9 +302,16 @@ $(document).ready(function() {
 		function nextQuestion3(){
 			 $("#currentQuestion").empty();
 			  $("#currentQuestion").append($("#gameResults").html());
-
+			  // $("#restart").append($("#gameResults").html());
+			  
 
 		}
+
+		function OnRestart(){
+			 $("#currentQuestion").empty();
+		 	$('#startBtn').show();
+}
+
 
 
 
